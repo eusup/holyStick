@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학습단모듈</title>
+
+  <script src="./resource/js/jquery-3.3.1.min.js"></script>
+  <script src="./resource/js/style.js"></script>
+
+  <link rel="stylesheet" href="./resource/css/remixicon.css">
+  <link rel="stylesheet" href="./resource/css/module.css">
+  <link rel="stylesheet" href="./resource/css/style.css">
+</head>
+
+<body>
+  <div class="wrap listening">
+    <div class="top">
+      <div class="con flex">
+        <div class="title">
+          <h2>학습 콘텐츠명이 들어갑니다.</h2>
+          <p class="info-text">학습설명이 들어갑니다.</p>
+        </div>
+        <div class="flex util">
+          <ul class="flex breadcurmb">
+            <li class="act">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+          </ul>
+          <button class="btn closed">창 닫기</button>
+        </div>
+      </div>
+    </div>
+    <div class="contents-wrap">
+      <div class="box">
+        <div class="con">
+          <div class="flex indicator">
+            <div class="flex page">
+              <span>1</span>/<span>99</span>
+            </div>
+            <div class="flex timer">
+              <img src="./resource/images/icn-timer.svg" alt="남은시간">
+              <div class="rage-wrap">
+                <div class="range">
+                  <div class="ball-color">
+                    <span class="ball"></span>
+                  </div>
+                </div>
+              </div>
+              <span>00:10</span>
+            </div>
+            <div class="flex score">
+              <span>제한점수 <span>100</span></span>
+              <span>획득점수 <span>30</span></span>
+            </div>
+          </div>
+          <div class="question-wrap">
+            <label for="question01">
+              <input type="radio" name="question" id="question01">
+              <span>문제 1</span>
+            </label>
+            <label for="question02" class="wrong">
+              <input type="radio" name="question" id="question02">
+              <span>문제 2</span>
+            </label>
+            <label for="question03">
+              <input type="radio" name="question" id="question03">
+              <span>문제 3</span>
+            </label>
+          </div>
+          <div class="word question-wrap">
+            <span class="tag">word</span>
+            <span class="tag blank">blank</span>
+            <span class="tag hint">hint</span>
+          </div>
+          <div class="word answer-wrap">
+            <button class="tag" type="button" value="answer1">answer</button>
+            <button class="tag" type="button" value="answer2">answer</button>
+            <button class="tag" type="button" value="answer3">answer</button>
+            <button class="tag" type="button" value="answer4">answer</button>
+            <button class="tag" type="button" value="answer5">answer</button>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn">Button</button>
+            <button class="btn white">Button</button>
+            <button class="btn icn-only">Button</button>
+            <button class="btn white icn-only play"><img src="./resource/images/l-icn-play.svg" alt="play"></button>
+            <button class="btn white icn-only pause"><img src="./resource/images/icn-repeat.svg" alt="repeat"></button>
+            <button class="btn white icn-only repeat">Button</button>
+            <button class="btn closed">Button</button>
+            <button class="btn icn">NEXT<img src="./resource/images/icn-arrow.svg" alt="#"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
