@@ -60,11 +60,12 @@
   transition: 0.5s;
 }
 
-.recording .btn{
+.wrap .recording > .btn.white{
   width: 38px;
   height: 38px;
   border: none;
   background: transparent;
+  box-shadow: none;
   background-image: url(../images/s-icn-mic.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -166,6 +167,7 @@
   &.correct{
     background: var(--color-main);
     color: var(--color-white-hold);
+    box-shadow: inset 4px 4px 8px #0073c3, 6px 6px 12px var(--color-shadow);
   }
 }
 /* step02 end */
@@ -279,4 +281,146 @@
 }
 /* step04 end */
 
+/* step05 */
+.step05 .video::before{
+  display: none;
+}
+
+.step05 .pill-wrap{
+  display: flex;
+  justify-content: center;
+}
+
+.step05 .pill-wrap li{
+  cursor: pointer;
+}
+
+.step05 .video-wrap+.pill-wrap{
+  height: auto;
+}
+/* step05 end */
+
 /* listening end */
+
+/* dark thema */
+.dark:root {
+
+}
+
+:root:has(.wrap.dark) {
+  --color-white80: rgba(255, 255, 255, 0.8);
+  --color-white60: rgba(255, 255, 255, 0.6);
+  --color-white40: rgba(255, 255, 255, 0.4);
+  --color-white20: rgba(255, 255, 255, 0.2);
+  --color-white10: rgba(255, 255, 255, 0.1);
+  --color-white0: rgba(255, 255, 255, 0.0);
+  --color-black10: rgba(0, 0, 0, 0.05);
+  --color-font: #ffffff;
+  --color-font60: rgba(255, 255, 255, 0.6);
+  --color-font10: rgba(255,255,255,0.2);
+}
+
+:root:has(.wrap.listening.dark) {
+  --color-main: #0F9CFE;
+  --color-main15: rgba(15, 156, 254, 0.15);
+  --color-sub: #68C1FF;
+  --color-font-gray: #849FAF;
+  --color-border: #68C1FF;
+  --color-BG01: #0F244A;
+  --color-BG02: #001D4F;
+  --color-shadow: #031A43;
+  --color-btn-BG01: #0F9CFE;
+  --color-btn-BG02: #0077FF;
+  --color-whiteBtn: #D1EAFF;
+}
+
+.dark button,
+.dark .btn{
+  box-shadow: 0px 4px 8px var(--color-shadow);
+
+  &.white{
+    background: var(--color-white20);
+    border: 1px solid var(--color-white20);
+  }
+
+  &.closed{
+    background-image: url(../images/icn-closed-white.svg);
+  }
+}
+
+.dark .box,
+.dark.history .data{
+  background: var(--color-white10);
+}
+
+.dark .top .breadcurmb li.act~li{
+  background-color: var(--color-white20);
+  &::before{
+    background-color: var(--color-white20);
+  }
+}
+
+.dark .audio{
+  background: linear-gradient( var(--color-BG01), var(--color-BG02));
+}
+
+.dark .speed{
+  border: 1px solid var(--color-white20);
+  box-shadow: 0px 4px 8px var(--color-shadow);
+  background: var(--color-white20);
+}
+
+.dark .recording{
+  border: 1px solid var(--color-white20);
+  box-shadow: 0px 4px 8px var(--color-shadow);
+  background: var(--color-white20);
+}
+
+.dark .speed .btn.icn-only{
+  box-shadow: none;
+}
+
+.dark .rage-wrap{
+  background-color: rgba(0,0,0,0.02);
+  box-shadow: inset 0px 2px 4px var(--color-BG01);
+}
+
+.dark .rage-wrap .range{
+  background-color: var(--color-white20);
+}
+
+.dark.step02.type02 .answer-wrap .btn:not(.correct){
+  background: linear-gradient(var(--color-white10),var(--color-white0));
+}
+
+.dark .pill-wrap.bg{
+  background-color: var(--color-white10);
+}
+
+.dark .pill-wrap li{
+  background-color: #26395C;
+  &.correct{
+    background: linear-gradient(var(--color-white10),var(--color-white0));
+    box-shadow: 0px 4px 8px var(--color-shadow);
+  }
+  &.wrong{
+    background-color: var(--color-red);
+  }
+  & input{
+    color: var(--color-white);
+  }
+}
+
+.dark .pill-wrap li.wrong input{
+  color: var(--color-font-red);
+}
+
+.pill-wrap.answer li{
+  background: linear-gradient(var(--color-white10),var(--color-white0));
+  box-shadow: 0px 4px 8px var(--color-shadow);
+}
+
+.dark .pill-wrap li.next .hint{
+  color: #343841;
+}
+/* dark thema end */

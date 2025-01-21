@@ -31,4 +31,11 @@ $(document).ready(function () {
     $(".recording").click(function(){
         $(this).toggleClass("act");
     });
+
+    // 다크모드 테스트
+    $(".darkMode-btn").click(function(){
+        $(this).toggleClass("act");
+        $(this).find("i").toggleClass("act");
+        $(".wrap").toggleClass("dark");
+    });
 });
