@@ -1,10 +1,13 @@
 @media screen and (max-width : 1366px) {
+    :root {
+        --gap: 20px;
+    }
+
     .top .con {
         padding: 20px;
     }
 
     .box {
-        gap: 20px;
         width: calc(100% - 40px);
         padding: 20px;
         border-top-left-radius: 20px;
@@ -16,7 +19,7 @@
     }
 
     .top .breadcurmb {
-        gap: 10px;
+        gap: var(--gap);
     }
 
     .top .breadcurmb li {
@@ -75,6 +78,47 @@
         right: 0;
     }
 
+    .switch {
+        padding: 2px;
+    }
+
+    .switch label span {
+        padding: 8px 12px;
+        font-size: 1.6rem;
+    }
+
+    .speaking .dictionary {
+        max-width: 320px;
+        height: 168px;
+        padding: 12px;
+        font-size: 1.8rem;
+    }
+
+    .speaking .dictionary>p {
+        margin-bottom: 8px;
+    }
+
+    .speaking .dictionary .small {
+        font-size: 1.6rem;
+    }
+
+    .speaking .dictionary .word {
+        font-size: 2.4rem;
+    }
+
+    .speaking .dictionary ul li span:first-child {
+        font-size: 1.4rem;
+    }
+
+    .speaking .dictionary .closed {
+        width: 26px;
+        height: 26px;
+    }
+
+    .speaking .scroll-script ul>li {
+        margin-bottom: 15px;
+    }
+
     .btn.closed {
         width: 48px;
         height: 48px;
@@ -83,20 +127,21 @@
     }
 
     .btn.prev-q,
-    .btn.next-q{
+    .btn.next-q {
         width: 48px;
         height: 48px;
-        & img{
+
+        & img {
             width: 32px;
             height: 32px;
         }
     }
 
-    .btn.prev-q{
+    .btn.prev-q {
         left: 0;
     }
 
-    .btn.next-q{
+    .btn.next-q {
         right: 0;
     }
 
@@ -126,35 +171,39 @@
         font-size: 1.6rem;
     }
 
-    .pill-wrap{
+    .pill-wrap {
         padding: 20px;
         border-radius: 20px;
     }
 
-    .pill-wrap ul{
+    .pill-wrap ul {
         gap: 8px;
         font-size: 2.4rem;
     }
 
-    .pill-wrap ul li{
+    .pill-wrap ul li {
         padding: 12px 18px;
         box-shadow: inset 3px 3px 6px var(--color-shadow);
-        &.wrong{
+
+        &.wrong {
             box-shadow: inset 2px 2px 3px var(--color-shadow-red), 0px 2px 4px var(--color-shadow);
         }
-        &.correct{
+
+        &.correct {
             box-shadow: 0px 2px 4px var(--color-shadow);
         }
-        & input{
+
+        & input {
             padding: 12px 18px;
             font-size: 2.4rem;
         }
     }
 
-    .pill-wrap li.next .hint{
+    .pill-wrap li.next .hint {
         bottom: calc(100% + 16px);
         padding: 12px 20px;
-        &::before{
+
+        &::before {
             bottom: -6px;
             width: 15px;
             height: 15px;
@@ -213,86 +262,71 @@
         height: 360px;
     }
 
-    .step02.type02 .question-wrap {
-        font-size: 5.4rem;
-    }
-
-    .step02.type02 .answer-wrap .btn {
-        font-size: 2.4rem;
-    }
-
-    .step03 .video-wrap{
-        gap: 20px;
-    }
-
-    .result .box h3 img{
+    .result .box h3 img {
         height: 36px;
     }
 
-    .result .box{
-        gap: 20px;
+    .result .box {
         padding: 0;
         padding-bottom: 20px;
     }
 
-    .result .box>div{
-        gap: 20px;
-    }
-
-    .result .box h4{
+    .result .box h4 {
         font-size: 1.6rem;
     }
 
-    .result .box .list-wrap{
+    .result .box .list-wrap {
         width: 260px;
     }
 
-    .result .box .list-wrap ul{
+    .result .box .list-wrap ul {
         gap: 8px;
     }
 
-    .result .box .list-wrap ul li{
+    .result .box .list-wrap ul li {
         padding: 18px;
         border-radius: 10px;
     }
 
-    .result .box .list-wrap>div ul li p{
+    .result .box .list-wrap>div ul li p {
         font-size: 1.8rem;
     }
 
-    .result .box .data-wrap .table-wrap table{
+    .result .box .data-wrap .table-wrap table {
         font-size: 1.6rem;
     }
 
-    .result .box .data-wrap .table-wrap table tr{
+    .result .box .data-wrap .table-wrap table tr {
         height: 36px;
         line-height: 36px;
     }
 
-    .result .box .data-wrap :where(th, td){
+    .result .box .data-wrap :where(th, td) {
         background-size: 28px;
-        &.num{
+
+        &.num {
             width: 30px;
         }
-        &.check{
+
+        &.check {
             width: 28px;
         }
     }
 
-    .result .box .score{
+    .result .box .score {
         padding: 22px 18px;
     }
 
-    .result .box .score dl{
+    .result .box .score dl {
         gap: 6PX;
         font-size: 2.4rem;
     }
 
-    .result .box .score dl dt{
+    .result .box .score dl dt {
         font-size: 1.6rem;
     }
 
-    .result .box>.btn-wrap .btn{
+    .result .box>.btn-wrap .btn {
         max-width: 110px;
         padding: 16px 24px;
         font-size: 1.8rem;
@@ -305,51 +339,70 @@
         height: 350px;
     }
 
-    .dimmed .popup.result>div.effect{
+    .dimmed .popup.result>div.effect {
         top: 45%;
     }
 
-    .dimmed .popup.alert{
+    .dimmed .popup.alert {
         padding: 20px;
         border-radius: 20px;
         font-size: 1.6rem;
     }
 
-    .dimmed .alert p{
+    .dimmed .alert p {
         font-size: 2rem;
     }
 
-    .dimmed .popup > .btn-wrap{
+    .dimmed .popup>.btn-wrap {
         margin-top: 18px;
     }
 
-    .dimmed .popup > .btn-wrap .btn{
+    .dimmed .popup>.btn-wrap .btn {
         font-size: 1.8rem;
         padding: 14px 24px;
     }
 
     @keyframes popup-result-elipse {
         0% {
-          width: 350px;
-          height: 350px;
+            width: 350px;
+            height: 350px;
         }
-      
+
         100% {
-          width: 350px;
-          height: 350px;
+            width: 350px;
+            height: 350px;
         }
-      }
+    }
 
     .dimmed .result img.chara {
         width: 240px;
         height: 240px;
     }
+
+    .listening.step02.type02 .question-wrap {
+        font-size: 5.4rem;
+    }
+
+    .listening.step02.type02 .answer-wrap .btn {
+        font-size: 2.4rem;
+    }
+
+    .listening.step03 .video-wrap{
+        height: 100%;
+    }
+
+    .speaking .scroll-script {
+        font-size: 2.4rem;
+    }
 }
 
-@media screen and (max-width : 1024px){
-}
+@media screen and (max-width : 1024px) {}
 
 @media screen and (max-width : 768px) {
+    :root {
+        --gap: 10px;
+    }
+
     .top {
         font-size: 1.3rem;
     }
@@ -364,6 +417,10 @@
 
     .top h2 {
         font-size: 1.5rem;
+    }
+
+    .wrap .top .info-text{
+        padding-left: 0;
     }
 
     .top .info-text {
@@ -404,10 +461,28 @@
         }
     }
 
+    .switch label span {
+        padding: 4px 8px;
+        font-size: 1.3rem;
+    }
+
+    .video{
+        height: 100%;
+        flex-shrink: 1;
+    }
+
+    .video::before{
+        display: none;
+    }
+
+    .video .btn {
+        width: 48px;
+        height: 48px;
+    }
+
     .box {
         width: 100%;
         padding: 15px;
-        gap: 10px;
     }
 
     .indicator {
@@ -461,41 +536,42 @@
         background-size: 36px;
     }
 
-    .pill-wrap{
+    .pill-wrap {
         padding: 10px;
         border-radius: 10px;
     }
-    
-    .pill-wrap ul{
+
+    .pill-wrap ul {
         gap: 6px;
         font-size: 1.8rem;
     }
 
-    .pill-wrap ul li{
-        padding: 10px 12px;
-        & input{
+    .pill-wrap ul li {
+        padding: 12px 14px;
+
+        & input {
             font-size: 1.8rem;
-            padding: 10px 12px;
+            padding: 12px 14px;
         }
     }
 
-    .pill-wrap.answer ul li{
+    .pill-wrap.answer ul li {
+        padding: 14px 16px;
+    }
+
+    .pill-wrap li.next .hint {
         padding: 8px 14px;
     }
 
-    .pill-wrap li.next .hint{
-        padding: 8px 14px;
-    }
-
-    .indicator .score{
+    .indicator .score {
         gap: 4px;
     }
 
-    .indicator .score>span span{
+    .indicator .score>span span {
         width: 22px;
     }
 
-    .indicator .score>span{
+    .indicator .score>span {
         padding: 4px 8px;
     }
 
@@ -576,11 +652,6 @@
         width: 24px;
     }
 
-    .video .btn {
-        width: 48px;
-        height: 48px;
-    }
-
     .wrap.listening video+.btn.play::before {
         width: 32px;
         height: 32px;
@@ -615,63 +686,136 @@
         font-size: 1.6rem;
     }
 
-    .step02.type02 .question-wrap {
+    .listening.step02.type02 .question-wrap {
         font-size: 3.2rem;
     }
 
-    .step02.type02 .question-wrap .blank {
+    .listening.step02.type02 .question-wrap .blank {
         border-bottom: 3px solid var(--color-font);
     }
 
-    .step02.type02 .answer-wrap {
+    .listening.step02.type02 .answer-wrap {
         flex-direction: column;
     }
 
-    .step02.type02 .answer-wrap .btn {
+    .listening.step02.type02 .answer-wrap .btn {
         border-radius: 10px;
-        padding: 16px;
+        padding: 30px 16px;
         font-size: 1.8rem;
     }
 
-    .step03 .video-wrap{
+    .listening.step03 .con.fill{
+        gap: calc(var(--gap) * 2);
+    }
+
+    .listening.step03 .video-wrap {
         flex-direction: column;
     }
 
-    .step04 .con:has(.video-wrap){
+    .listening.step03 .pill-wrap.bg,
+    .listening.step03 .pill-wrap.answer{
+        height: auto;
+    }
+
+    .listening .step04 .con:has(.video-wrap) {
         padding-top: 46px;
     }
 
-    .step04 .pill-wrap{
+    .listening.step04 .pill-wrap {
         height: 100%;
     }
 
-    .step04 .pill-wrap ul{
+    .listening.step04 .pill-wrap ul {
         height: 100%;
         margin: 0;
         align-content: center;
     }
 
-    .step04 .pill-wrap.answer ul li{
+    .listening.step04 .pill-wrap.answer ul li {
         padding: 10px 18px;
     }
 
+    .speaking .video-wrap {
+        flex-direction: column;
+    }
+
+    .speaking .dictionary {
+        bottom: 0%;
+        left: 0%;
+        max-width: inherit;
+        max-height: inherit;
+        width: 100%;
+        height: 96px;
+        padding: 8px;
+        border-radius: 6px;
+        font-size: 1.4rem;
+        z-index: 0;
+    }
+
+    .speaking .dictionary .closed {
+        display: none;
+    }
+
+    .speaking .scroll-script {
+        height: 100%;
+        font-size: 1.6rem;
+    }
+
+    .speaking .scroll-script ul {
+        position: relative;
+        height: calc(100% - 108px);
+    }
+
+    .speaking .scroll-script ul>li {
+        position: static;
+        margin-bottom: 12px;
+    }
+
+    .speaking .dictionary .word {
+        font-size: 1.6rem;
+    }
+
+    .speaking .dictionary .small {
+        font-size: 1.4rem;
+    }
+
+    .speaking .scroll-script ul>li {
+        flex-direction: row;
+        gap: 2px;
+        margin-bottom: 6px;
+    }
+
+    .speaking .dictionary>p {
+        margin-bottom: 6px;
+    }
+
+    .speaking .dictionary ul li span:first-child {
+        font-size: 1.3rem;
+    }
+
+    .speaking .video video+.btn.play::before {
+        width: 36px;
+        height: 36px;
+    }
+
     .btn.prev-q,
-    .btn.next-q{
+    .btn.next-q {
         width: 36px;
         height: 36px;
         transform: translateY(0);
         top: 0;
-        & img{
+
+        & img {
             width: 28px;
             height: 28px;
         }
     }
 
-    .btn.prev-q{
+    .btn.prev-q {
         transform: translateY(0) rotate(180deg);
     }
 
-    .step04 .pill-wrap.answer{
+    .listening .step04 .pill-wrap.answer {
         height: 100%;
     }
 
@@ -685,102 +829,101 @@
         height: 140px;
     }
 
-    .dimmed .popup.alert{
+    .dimmed .popup.alert {
         padding: 10px;
         border-radius: 10px;
         line-height: 1.4;
     }
 
-    .dimmed .popup > .btn-wrap{
+    .dimmed .popup>.btn-wrap {
         margin-top: 14px;
     }
 
-    .step04 + .dimmed .alert::before{
+    .lestening .step04+.dimmed .alert::before {
         top: -100px;
         width: 200px;
         height: 100px;
     }
 
-    .step04 + .dimmed .alert::after{
+    .lestening .step04+.dimmed .alert::after {
         top: -80px;
         width: 160px;
         height: 160px;
     }
 
-    .result .box{
-        gap: 10px;
+    .result .box {
         padding: 15px;
         padding-top: 0;
     }
 
-    .result .box>div.flex{
+    .result .box>div.flex {
         flex-direction: column;
         gap: 10px;
     }
 
-    .result .box h3 img{
+    .result .box h3 img {
         height: 26px;
     }
 
-    .result .box .list-wrap{
+    .result .box .list-wrap {
         width: 100%;
         max-width: inherit;
         height: auto;
     }
 
-    .result .box .list-wrap ul{
+    .result .box .list-wrap ul {
         gap: 4px;
     }
 
-    .result .box .list-wrap ul li{
+    .result .box .list-wrap ul li {
         padding: 8px;
         border-radius: 5px;
     }
 
-    .result .box .list-wrap ul li p{
+    .result .box .list-wrap ul li p {
         font-size: 1.4rem;
     }
 
-    .result .box .data-wrap{
+    .result .box .data-wrap {
         padding: 10px;
         border-radius: 10px;
     }
 
-    .result .box .data-wrap .table-wrap table{
+    .result .box .data-wrap .table-wrap table {
         font-size: 1.4rem;
     }
 
-    .result .box .data-wrap .table-wrap table tr{
+    .result .box .data-wrap .table-wrap table tr {
         height: 28px;
         line-height: 28px;
     }
 
-    .result .box .score{
+    .result .box .score {
         gap: 8px;
         padding: 10px;
         border-radius: 5px;
     }
 
-    .result .box .score dl{
+    .result .box .score dl {
         gap: 8px;
         font-size: 1.6rem;
     }
 
-    .result .box .score dl dt{
+    .result .box .score dl dt {
         font-size: 1.3rem;
     }
 
-    .result .box>.btn-wrap .btn{
+    .result .box>.btn-wrap .btn {
         font-size: 1.6rem;
         max-width: inherit;
     }
 
-    .darkMode-btn{
+    .darkMode-btn {
         bottom: 140px;
         left: 10px;
     }
 
-    .other-type{
+    .other-type {
         bottom: 80px;
         left: 10px;
     }
@@ -793,12 +936,10 @@
         background-size: 42px;
     }
 
-    .dimmed .result img.chara{
+    .dimmed .result img.chara {
         width: 84px;
         height: 84px;
     }
 }
 
-@media screen and (max-width : 350px){
-
-}
+@media screen and (max-width : 350px) {}

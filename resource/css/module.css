@@ -90,6 +90,19 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 :root {
   --color-white-hold: #ffffff;
   --color-white: #ffffff;
@@ -110,6 +123,7 @@
   --color-font-green: #48C931;
   --color-shadow-green: #B9E0B1;
   --duration: 0.3s;
+  --gap: 30px;
 }
 
 /* color */
@@ -153,21 +167,6 @@
   --color-btn-BG01: #0F9CFE;
   --color-btn-BG02: #0077FF;
   --color-whiteBtn: #D1EAFF;
-}
-
-:root:has(.wrap.dark.voca) {
-  --color-box-shadow: #301837;
-  --color-border: #C09ECB;
-  --color-btnBig-gradient01: #AD3CDD;
-  --color-btnBig-gradient02: #8C16BD;
-  --color-btnBig-gradient03: #9823C9;
-  --color-btnBig-shadow02: #E1ACEE;
-  --color-btn-BG01: #420B52;
-  --color-btn-BG02: rgba(66, 11, 82, 0);
-  --color-btn-shadow01: #3B074A;
-  --color-btn-shadow02: rgba(255, 255, 255, 0.6);
-  --color-BG-gradient01: #401E4B;
-  --color-BG-gradient02: #3C1360;
 }
 
 /* color end */
@@ -253,9 +252,50 @@ textarea {
   }
 }
 
+label {
+  display: block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
 i {
   font-size: 36px;
   line-height: 1;
+}
+
+.switch {
+  gap: 4px;
+  margin-left: auto;
+  padding: 4px;
+  border-radius: 100px;
+  background: linear-gradient(var(--color-whiteBtn), var(--color-white0));
+  box-shadow: 0px 4px 8px var(--color-shadow);
+}
+
+.switch label span {
+  display: inline-block;
+  padding: 10px 12px;
+  background: linear-gradient(var(--color-white60), var(--color-white0));
+}
+
+.switch label:first-child span {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.switch label:last-child span {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.switch label input:checked+span {
+  background: linear-gradient(var(--color-btn-BG01), var(--color-btn-BG02));
+  color: var(--color-white-hold);
 }
 
 /* btn */
@@ -389,6 +429,7 @@ button,
   flex-direction: column;
   width: 100vw;
   height: 100dvh;
+  background: linear-gradient(var(--color-BG01), var(--color-BG02));
 }
 
 .contents-wrap {
@@ -398,7 +439,7 @@ button,
 .box {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--gap);
   width: calc(100% - 60px);
   height: 100%;
   margin: 0 auto;
@@ -437,7 +478,7 @@ button,
   font-size: 1.8rem;
 }
 
-.top .info-text {
+.wrap .top .info-text {
   position: relative;
   margin-top: 4px;
   padding-left: 32px;
@@ -576,6 +617,7 @@ button,
 /* indicator */
 .indicator {
   justify-content: space-between;
+  gap: 8px;
   font-size: 1.8rem;
 }
 
@@ -620,18 +662,20 @@ button,
 .indicator .score {
   gap: 8px;
   margin-left: auto;
+  font-size: 1.6rem;
 }
 
 .indicator .score>span {
   padding: 6px 12px;
   border-radius: 100px;
-  border: 1px solid var(--color-main);
+  box-shadow: inset 2px 2px 4px var(--color-shadow);
 }
 
 .indicator .score>span span {
   display: inline-block;
   width: 32px;
   text-align: center;
+  font-weight: 700;
 }
 
 /* indicator end */
@@ -807,6 +851,10 @@ button,
 /* intro end */
 
 /* history */
+.history:not(.intro) {
+  background: linear-gradient(var(--color-BG01), var(--color-BG02));
+}
+
 .history .box .con .top {
   justify-content: space-between;
   margin-bottom: 30px;
@@ -835,7 +883,7 @@ button,
 }
 
 .history .box .con .data-wrap {
-  gap: 30px;
+  gap: var(--gap);
   height: 100%;
 }
 
@@ -1050,9 +1098,19 @@ button,
     background-color: var(--color-white);
   }
 }
+
 /* pill stlye end */
 
 /* result */
+.result .box {
+  flex-direction: column;
+  gap: var(--gap);
+  align-items: flex-start;
+  background: inherit;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .result .box h4 {
   font-size: 2.4rem;
 
@@ -1061,18 +1119,9 @@ button,
   }
 }
 
-.result .box {
-  flex-direction: column;
-  gap: 30px;
-  align-items: flex-start;
-  background: inherit;
-  border-radius: 0;
-  box-shadow: none;
-}
-
 .result .box>div {
   width: 100%;
-  gap: 30px;
+  gap: var(--gap);
 }
 
 .result .box .list-wrap {
@@ -1087,7 +1136,7 @@ button,
   font-size: 2.4rem;
 }
 
-.result .box .list-wrap>div{
+.result .box .list-wrap>div {
   position: relative;
   height: 100%;
   overflow: auto;
@@ -1220,7 +1269,7 @@ button,
   }
 }
 
-.result .box .score{
+.result .box .score {
   gap: 24px;
   width: 100%;
   padding: 24px;
@@ -1228,7 +1277,7 @@ button,
   background-color: var(--color-main);
 }
 
-.result .box .score dl{
+.result .box .score dl {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1237,24 +1286,25 @@ button,
   font-size: 3.6rem;
 }
 
-.result .box .score dl dt{
+.result .box .score dl dt {
   font-size: 1.8rem;
   color: var(--color-white60);
 }
 
-.result .box .score dl dd{
+.result .box .score dl dd {
   gap: 4px;
   font-weight: 700;
 }
 
-.result .box>.btn-wrap{
+.result .box>.btn-wrap {
   gap: 12px;
 }
 
-.result .box>.btn-wrap .btn{
+.result .box>.btn-wrap .btn {
   max-width: 160px;
   width: 100%;
 }
+
 /* result end */
 
 /* popup */
@@ -1434,7 +1484,7 @@ button,
 /* popup end */
 
 /* 임시 고/저학년 모드 */
-.darkMode-btn{
+.darkMode-btn {
   position: fixed;
   bottom: 1vw;
   left: 1vw;
@@ -1446,27 +1496,27 @@ button,
   overflow: hidden;
   transition: 0.3s;
 
-  & i{
+  & i {
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     font-size: 2.2rem;
     opacity: 0;
   }
 
-  &.act{
+  &.act {
     background: var(--color-white-hold);
     color: #343841;
     box-shadow: none;
   }
 
-  & i.act{
+  & i.act {
     opacity: 1;
   }
 }
 
-.other-type{
+.other-type {
   position: fixed;
   bottom: 1vw;
   left: calc(54px + 1.5vw);
@@ -1478,9 +1528,9 @@ button,
   overflow: hidden;
   transition: 0.3s;
 
-  & i{
+  & i {
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     font-size: 2.6rem;
